@@ -3,3 +3,5 @@ backend/node_modules
 client-frontend/node_modules
 workers-frontend/node_modules
 kamkichize
+client-frontend/utils/index.ts
+workers-frontend/utils/index.ts
