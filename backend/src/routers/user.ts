@@ -20,7 +20,7 @@ const s3Client = new S3Client({
         accessKeyId: process.env.ACCESS_KEY_ID ?? "",
         secretAccessKey: process.env.ACCESS_SECRET ?? "",
     },
-    region: "us-east-1"
+    region: "eu-north-1"
 })
 
 const router = Router();
@@ -179,8 +179,8 @@ router.get("/presignedUrl", authMiddleware, async (req, res) => {
     const userId = req.userId;
 
     const { url, fields } = await createPresignedPost(s3Client, {
-        Bucket: 'hkirat-cms',
-        Key: `fiver/${userId}/${Math.random()}/image.jpg`,
+        Bucket: 'saas-proj-05',
+        Key: `saas/${userId}/${Math.random()}/image.jpg`,
         Conditions: [
           ['content-length-range', 0, 5 * 1024 * 1024] // 5 MB max
         ],

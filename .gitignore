@@ -1,5 +1,7 @@
 .env
 backend/node_modules
-client-frontend/node_modules
+user-frontend/node_modules
 workers-frontend/node_modules
 kamkichize
+node_modules
+backend/src/privateKey
