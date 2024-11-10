@@ -42,7 +42,7 @@ router.post("/payout", workerMiddleware, async (req, res) => {
 
     const transaction = new Transaction().add(
         SystemProgram.transfer({
-            fromPubkey: new PublicKey("2KeovpYvrgpziaDsq8nbNMP4mc48VNBVXb5arbqrg9Cq"),
+            fromPubkey: new PublicKey(""),
             toPubkey: new PublicKey(worker.address),
             lamports: 1000_000_000 * worker.pending_amount / TOTAL_DECIMALS,
         })

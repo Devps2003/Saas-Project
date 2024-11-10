@@ -1,5 +1,5 @@
-export const JWT_SECRET = process.env.JWT_SECRET ?? "dev123";
-export const WORKER_JWT_SECRET = JWT_SECRET + "worker";
+export const JWT_SECRET = process.env.JWT_SECRET ?? "";
+export const WORKER_JWT_SECRET = JWT_SECRET + "";
 
 export const TOTAL_DECIMALS = 1000_000_000;
 

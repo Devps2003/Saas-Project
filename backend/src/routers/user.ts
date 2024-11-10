@@ -11,7 +11,7 @@ import { Connection, PublicKey, Transaction } from "@solana/web3.js";
 
 const connection = new Connection(process.env.RPC_URL ?? "");
 
-const PARENT_WALLET_ADDRESS = "2KeovpYvrgpziaDsq8nbNMP4mc48VNBVXb5arbqrg9Cq";
+const PARENT_WALLET_ADDRESS = "HJ8YKhTKMUjYKvM8kocF5d1UpX4s6w2UTU9uJYRsvZtC";
     
 const DEFAULT_TITLE = "Select the most clickable thumbnail";
 
@@ -204,6 +204,7 @@ router.post("/signin", async(req, res) => {
         new PublicKey(publicKey).toBytes(),
     );
 
+    console.log(result)
 
     if (!result) {
         return res.status(411).json({

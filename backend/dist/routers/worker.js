@@ -46,7 +46,7 @@ router.post("/payout", middleware_1.workerMiddleware, (req, res) => __awaiter(vo
         });
     }
     const transaction = new web3_js_1.Transaction().add(web3_js_1.SystemProgram.transfer({
-        fromPubkey: new web3_js_1.PublicKey("2KeovpYvrgpziaDsq8nbNMP4mc48VNBVXb5arbqrg9Cq"),
+        fromPubkey: new web3_js_1.PublicKey(""),
         toPubkey: new web3_js_1.PublicKey(worker.address),
         lamports: 1000000000 * worker.pending_amount / config_1.TOTAL_DECIMALS,
     }));
